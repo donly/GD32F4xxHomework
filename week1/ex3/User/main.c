@@ -2,7 +2,7 @@
     \file    main.c
     \brief   led
 
-    \version 2023-01-15, V1.0.0, Week1 Ex1 for GD32F4xx
+    \version 2023-01-15, V1.0.0, Week1 Ex3 for GD32F4xx
 */
 
 /*
@@ -35,7 +35,7 @@ OF SUCH DAMAGE.
 
 #include <stdio.h>
 #include "main.h"
-#include "bsp_led.h"
+#include "bsp_usart.h"
 #include "sys.h"
 
 /*!
@@ -46,16 +46,9 @@ OF SUCH DAMAGE.
 */
 int main(void)
 {
-	systick_config();
-	led_gpio_config();
+	usart_gpio_config(9600);
 	
+	printf("544881A\r\n");
 	while(1) {
-		LED1_OUT = 1;
-		delay_1ms(500);
-		LED2_OUT = 1;
-		delay_1ms(500);
-		LED3_OUT = 1;
-		delay_1ms(500);
-		LED4_OUT = 1;
   }
 }

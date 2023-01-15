@@ -1,7 +1,6 @@
 /*!
-    \file    main.c
-    \brief   led
-
+    \file    main.h
+    \brief   the header file of main
     \version 2023-01-15, V1.0.0, Week1 Ex1 for GD32F4xx
 */
 
@@ -32,30 +31,10 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 OF SUCH DAMAGE.
 */
 
+#ifndef __MAIN_H
+#define __MAIN_H
 
-#include <stdio.h>
-#include "main.h"
-#include "bsp_led.h"
-#include "sys.h"
 
-/*!
-    \brief    main function
-    \param[in]  none
-    \param[out] none
-    \retval     none
-*/
-int main(void)
-{
-	systick_config();
-	led_gpio_config();
-	
-	while(1) {
-		LED1_OUT = 1;
-		delay_1ms(500);
-		LED2_OUT = 1;
-		delay_1ms(500);
-		LED3_OUT = 1;
-		delay_1ms(500);
-		LED4_OUT = 1;
-  }
-}
+#endif /* __MAIN_H */
+
+

@@ -1,12 +1,15 @@
 /*!
-    \file    main.c
-    \brief   led
+    \file    gd32f4xx_it.h
+    \brief   the header file of the ISR
 
-    \version 2023-01-15, V1.0.0, Week1 Ex1 for GD32F4xx
+    \version 2016-08-15, V1.0.0, firmware for GD32F4xx
+    \version 2018-12-12, V2.0.0, firmware for GD32F4xx
+    \version 2020-09-30, V2.1.0, firmware for GD32F4xx
+    \version 2022-03-09, V3.0.0, firmware for GD32F4xx
 */
 
 /*
-    Copyright (c) 2023, 东哥
+    Copyright (c) 2022, GigaDevice Semiconductor Inc.
 
     Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:
@@ -32,30 +35,29 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 OF SUCH DAMAGE.
 */
 
+#ifndef GD32F4XX_IT_H
+#define GD32F4XX_IT_H
 
-#include <stdio.h>
-#include "main.h"
-#include "bsp_led.h"
-#include "sys.h"
+#include "gd32f4xx.h"
 
-/*!
-    \brief    main function
-    \param[in]  none
-    \param[out] none
-    \retval     none
-*/
-int main(void)
-{
-	systick_config();
-	led_gpio_config();
-	
-	while(1) {
-		LED1_OUT = 1;
-		delay_1ms(500);
-		LED2_OUT = 1;
-		delay_1ms(500);
-		LED3_OUT = 1;
-		delay_1ms(500);
-		LED4_OUT = 1;
-  }
-}
+/* function declarations */
+/* this function handles NMI exception */
+void NMI_Handler(void);
+/* this function handles HardFault exception */
+void HardFault_Handler(void);
+/* this function handles MemManage exception */
+void MemManage_Handler(void);
+/* this function handles BusFault exception */
+void BusFault_Handler(void);
+/* this function handles UsageFault exception */
+void UsageFault_Handler(void);
+/* this function handles SVC exception */
+void SVC_Handler(void);
+/* this function handles DebugMon exception */
+void DebugMon_Handler(void);
+/* this function handles PendSV exception */
+void PendSV_Handler(void);
+/* this function handles SysTick exception */
+void SysTick_Handler(void);
+
+#endif /* GD32F4XX_IT_H */

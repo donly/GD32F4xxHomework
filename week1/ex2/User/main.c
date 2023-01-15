@@ -2,7 +2,7 @@
     \file    main.c
     \brief   led
 
-    \version 2023-01-15, V1.0.0, Week1 Ex1 for GD32F4xx
+    \version 2023-01-15, V1.0.0, Week1 Ex2 for GD32F4xx
 */
 
 /*
@@ -51,11 +51,24 @@ int main(void)
 	
 	while(1) {
 		LED1_OUT = 1;
+		LED2_OUT = 0;
+		LED3_OUT = 0;
+		LED4_OUT = 0;
 		delay_1ms(500);
+		LED1_OUT = 0;
 		LED2_OUT = 1;
+		LED3_OUT = 0;
+		LED4_OUT = 0;
 		delay_1ms(500);
+		LED1_OUT = 0;
+		LED2_OUT = 0;
 		LED3_OUT = 1;
+		LED4_OUT = 0;
 		delay_1ms(500);
+		LED1_OUT = 0;
+		LED2_OUT = 0;
+		LED3_OUT = 0;
 		LED4_OUT = 1;
+		delay_1ms(500);
   }
 }
