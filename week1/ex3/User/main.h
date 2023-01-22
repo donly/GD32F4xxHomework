@@ -1,7 +1,7 @@
 /*!
     \file    main.h
     \brief   the header file of main
-    \version 2023-01-15, V1.0.0, Week1 Ex1 for GD32F4xx
+    \version 2023-01-15, V1.0.0, Week1 Ex3 for GD32F4xx
 */
 
 /*
