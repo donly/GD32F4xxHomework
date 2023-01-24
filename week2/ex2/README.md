@@ -1,0 +1,3 @@
+# GD32F4xx
+
+- TIMER5与TIMER2分别控制LED1 1s闪烁一次与LED2 500ms闪烁一次。
